@@ -23,7 +23,7 @@ pipeline {
                 
                 echo $DIR
                 
-                /var/lib/jenkins/sqlpackage/sqlpackage /action:Publish /SourceFile:$DIR /TargetDatabaseName:testdb /tsn:demo-db.cof6rbxdsl87.us-east-1.rds.amazonaws.com /tu:admin /tp:"IBMHertz-Project121"
+                /var/lib/jenkins/sqlpackage/sqlpackage /action:Publish /SourceFile:$DIR /TargetDatabaseName:test /tsn:demo-db.cof6rbxdsl87.us-east-1.rds.amazonaws.com /tu:testadmin /tp:"IBMHertz-Project121"
                 '''
                 slackSend color: '#BADA55', message: 'Schema Build Successfully'
              
